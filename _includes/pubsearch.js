@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Helpers to style buttons
   function setActive(btn) {
     btn.classList.add('selected');
-    btn.classList.remove('border-[#BBBBBB]', 'bg-[#f3f4f6]', 'text-[#193349]');
-    btn.classList.remove('border-[#193349]', 'bg-[#193349]');
-    btn.classList.add('border-[#6e59f6]', 'bg-[#6e59f6]', 'text-white');
+    btn.classList.remove('border-[#BBBBBB]', 'bg-[#f3f4f6]', 'text-[#2A2020]');
+    btn.classList.remove('border-[#2A2020]', 'bg-[#2A2020]');
+    btn.classList.add('border-[#664545]', 'bg-[#664545]', 'text-white');
   }
 
   function setInactive(btn) {
     btn.classList.remove('selected');
-    btn.classList.remove('border-[#6e59f6]', 'bg-[#6e59f6]', 'text-white');
-    btn.classList.remove('border-[#193349]', 'bg-[#193349]');
-    btn.classList.add('border-[#BBBBBB]', 'bg-[#fafcf3]', 'text-[#193349]');
+    btn.classList.remove('border-[#664545]', 'bg-[#664545]', 'text-white');
+    btn.classList.remove('border-[#2A2020]', 'bg-[#2A2020]');
+    btn.classList.add('border-[#BBBBBB]', 'bg-[#FBFCF4]', 'text-[#2A2020]');
   }
 
   // Build a mapping from Theme Title -> Theme Key using header buttons
@@ -111,20 +111,19 @@ document.addEventListener('DOMContentLoaded', function() {
         continue;
       }
 
-      // Theme filter (OR within selected themes, card must have at least one)
-      if (requireThemes) {
-        const hasAnyTheme = meta.themeKeys.some(k => selectedThemeKeys.has(k));
-        if (!hasAnyTheme) {
-          card.style.display = 'none';
-          continue;
+      // Combined theme and tag filter (OR across themes and tags: card must have at least one selected theme OR at least one selected tag)
+      if (requireThemes || requireTags) {
+        let matchesFilter = false;
+        if (requireThemes) {
+          const hasAnyTheme = meta.themeKeys.some(k => selectedThemeKeys.has(k));
+          if (hasAnyTheme) matchesFilter = true;
         }
-      }
-
-      // Tag filter (AND: card must include all selected tags)
-      if (requireTags) {
-        const tags = workTagsCache.get(meta.href) || [];
-        const cardHasAll = [...selectedTags].every(t => tags.includes(t));
-        if (!cardHasAll) {
+        if (requireTags) {
+          const tags = workTagsCache.get(meta.href) || [];
+          const cardHasAny = [...selectedTags].some(t => tags.includes(t));
+          if (cardHasAny) matchesFilter = true;
+        }
+        if (!matchesFilter) {
           card.style.display = 'none';
           continue;
         }

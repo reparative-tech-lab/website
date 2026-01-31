@@ -17,6 +17,8 @@ research_themes:
   - exposing
 tags:
   - Peer-reviewed article
+  - Qualitative Methods
+  - Book chapter
 images:
   - figure_03.jpg
   - figure_02.jpg

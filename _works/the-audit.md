@@ -14,7 +14,7 @@ research_themes:
 tags:
   - Book chapter
 images:
-  - figure_01.jpg
+  - figure_01.png
 ---
 iBuyers are firms that use automated valuation models (AVMs), streamline home buying processes, and provide all-cash offers to purchase homes. Although the previous literature has explored the roles and limitations of iBuyers in the housing market, empirical research on the racial implications of these algorithmic home buying processes remains understudied. Using a spatial lag model, this study shows the spatial clustering of iBuyer profit margins, that iBuyers gain more profits when they resell to individuals than institutions, and that some iBuyers have a statistically significant correlation between their profit margins and the proportion of marginalized racial groups within a census tract, while controlling for individual housing characteristics, neighborhood housing quality and demand, and neighborhood amenities and socioeconomic factors. 
 

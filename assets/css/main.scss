@@ -6,27 +6,47 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'GT Standard';
+  font-family: 'ABC Marist';
   /* primary: baseurl-aware path; fallback: root path so local _site previews work */
-  src: url("{{ '/assets/css/GT-Standard-M-Standard-Medium.woff2' | relative_url }}") format('woff2'),
-       url('/assets/css/GT-Standard-M-Standard-Medium.woff2') format('woff2');
-  font-weight: 500;
+  src: url("{{ '/assets/css/ABCMarist-Book.woff2' | relative_url }}") format('woff2'),
+       url('/assets/css/ABCMarist-Book.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Standard';
+  font-family: 'ABC Marist';
   /* primary: baseurl-aware path; fallback: root path so local _site previews work */
-  src: url("{{ '/assets/css/GT-Standard-L-Standard-Semibold.woff2' | relative_url }}") format('woff2'),
-       url('/assets/css/GT-Standard-L-Standard-Semibold.woff2') format('woff2');
-  font-weight: 600;
+  src: url("{{ '/assets/css/ABCMarist-BookItalic.woff2' | relative_url }}") format('woff2'),
+       url('/assets/css/ABCMarist-BookItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Marist';
+  /* primary: baseurl-aware path; fallback: root path so local _site previews work */
+  src: url("{{ '/assets/css/ABCMarist-Medium.woff2' | relative_url }}") format('woff2'),
+       url('/assets/css/ABCMarist-Medium.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'ABC Marist';
+  /* primary: baseurl-aware path; fallback: root path so local _site previews work */
+  src: url("{{ '/assets/css/ABCMarist-MediumItalic.woff2' | relative_url }}") format('woff2'),
+       url('/assets/css/ABCMarist-MediumItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
-  font-family: 'GT Standard', sans-serif;
+  font-family: 'ABC Marist', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,7 +66,7 @@ body {
 #site-header.is-shrunk {
   padding-top: 0.5rem; /* ~py-2 equivalent */
   padding-bottom: 0.5rem;
-  background-color: #fafcf3; /* apply background after scroll */
+  background-color: #FBFCF4; /* apply background after scroll */
 }
 
 #site-header.is-shrunk img {
@@ -63,19 +83,19 @@ body {
 /* Active state for research theme and tag filter buttons */
 .research-theme-btn.selected,
 .tag-btn.selected {
-  @apply border-[#6e59f6] bg-[#6e59f6] text-white;
+  @apply border-[#664545] bg-[#664545] text-[#FFF];
 }
 
 /* Inactive state (default) */
 .research-theme-btn,
 .tag-btn {
-  @apply border-[#BBBBBB] bg-[#fafcf3] text-[#193349];
+  @apply border-[#BBBBBB] bg-[#FBFCF4] text-[#2A2020];
 }
 
 /* Hover effect when not selected */
 .research-theme-btn:not(.selected):hover,
 .tag-btn:not(.selected):hover {
-  @apply border-[#6e59f6] bg-white text-[#193349] transition-colors;
+  @apply border-[#664545] bg-[#FFFFFF] text-[#2A2020] transition-colors;
 }
 
 /* People layout styles */

@@ -1,7 +1,7 @@
 ---
 layout: page
 home: true
-title: Lab for Urban Justice and Technology
+title: Reparative Technology Lab
 ---
 
   
@@ -9,12 +9,10 @@ title: Lab for Urban Justice and Technology
   <div id="hero-wrap" class="relative w-full">
 
     <!-- Video Background -->
-     <video id="hero-video" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-      <source src="{{ '/assets/imgs/hero.mp4' | relative_url }}" type="video/mp4">
-    </video>
-     
-     <!-- Header over video -->
-     <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#193349] py-6">
+    <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover z-0"> />
+
+    <!-- Header over video -->
+    <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#2A2020] py-6">
        <div id="site-header-inner" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
 
         <div id="site-header-inner-fixed" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
@@ -22,25 +20,26 @@ title: Lab for Urban Justice and Technology
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-3 md:pb-0 lg:pb-0">
               <div class="lg:col-span-6 flex items-center justify-between">
                 <a href="{{ '/' | relative_url }}">
-                  <h1 class="text-[#193349] text-xl md:text-2xl font-bold">
-                    <img src="{{ '/assets/imgs/logo.svg' | relative_url }}" alt="Lab for Urban Justice and Technology" onerror="(function(img){ if(img.dataset.fallbackTried) return; img.dataset.fallbackTried=true; img.src='/assets/imgs/logo.svg'; })(this)">
+                  <h1 class="text-[#2A2020] text-xl md:text-2xl font-bold">
+                    <img src="{{ '/assets/imgs/logo.svg' | relative_url }}" alt="Reparative Technology Lab" onerror="(function(img){ if(img.dataset.fallbackTried) return; img.dataset.fallbackTried=true; img.src='/assets/imgs/logo.svg'; })(this)">
                   </h1>
                 </a>
                 <button id="menu-toggle" class="lg:hidden ml-4 p-2 rounded" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#193349]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2A2020]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 </button>
               </div>
               <ul id="primary-nav" class="lg:col-span-6 hidden lg:flex flex-col lg:flex-row lg:justify-end space-y-1 lg:space-y-0 lg:space-x-8 lg:mt-0">
+
                 <li>
-                  <a href="/#our-work" class="text-[#193349] hover:text-gray-500">Our Work</a>
+                  <a href="{{ '/#our-approach' | relative_url }}" class="text-[#2A2020] hover:text-gray-500">Our Approach</a>
                 </li>
                 <li>
-                  <a href="/#our-approach" class="text-[#193349] hover:text-gray-500">Our Approach</a>
+                  <a href="{{ '/#our-work' | relative_url }}" class="text-[#2A2020] hover:text-gray-500">Our Work</a>
                 </li>
                 <li>
-                  <a href="/#team" class="text-[#193349] hover:text-gray-500">Team</a>
+                  <a href="{{ '/#team' | relative_url }}" class="text-[#2A2020] hover:text-gray-500">Team</a>
                 </li>
               </ul>
             </div>
@@ -51,9 +50,9 @@ title: Lab for Urban Justice and Technology
     <!-- Hero Section -->
      <div id="hero" class="relative z-10 w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-5 md:py-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        <div class="lg:col-span-6">
-          <p class="text-[#193349] text-3xl font-semibold leading-tight">
-            <span class="text-[#6a5aed]">The Lab for Urban Justice and Technology</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairng the relationships by acknowledging and addressing past harms.
+        <div class="lg:col-span-7">
+          <p class="text-[#2A2020] text-4xl leading-tight">
+            <span class="text-[#664545] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairng the relationships by acknowledging and addressing past harms.
           </p>
         </div>
       </div>
@@ -63,7 +62,7 @@ title: Lab for Urban Justice and Technology
      <section class="relative z-10 w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
         <div class="lg:col-span-12">
-          <h1 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide">RESEARCH THEME</h1>
+          <h1 class="text-[#664545] text-xl font-bold">Research Themes</h1>
         </div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
@@ -72,13 +71,23 @@ title: Lab for Urban Justice and Technology
 
           {% assign theme = theme_hash[1] %}
           <div class="lg:col-span-4 mb-4 lg:mb-0">
-            <h2 class="text-[#193349] text-lg md:text-xl font-bold mb-4">{{ theme.title | upcase }}</h2>
-            <p class="text-gray-600">{{ theme.description }}</p>
+            <h2 class="text-[#2A2020] text-xl md:text-xl font-bold mb-4">{{ theme.title }}</h2>
+            <p class="text-[#2A2020]">{{ theme.description }}</p>
           </div>
         {% endfor %}
       </div>
     </section>
   </div>
+  <section id="our-approach" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
+    <h1 class="text-[#664545] text-xl font-bold">Our Approach</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
+      <div class="lg:col-span-8">
+        <p class="text-[#2A2020] text-3xl leading-tight">
+          Our approach is uncover how these systems formalize present-day outputs in ways that disconnect them from past wrongs — and to work toward redress.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Our Work Section -->
   <section id="our-work" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
@@ -86,22 +95,22 @@ title: Lab for Urban Justice and Technology
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <!-- OUR WORK Title (3 columns) -->
       <div class="lg:col-span-3">
-        <h1 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide  mb-3">OUR WORK</h1>
+        <h1 class="text-[#664545] text-xl font-bold  mb-3">Our Work</h1>
       
       
           <div class="relative">
-            <svg class="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 text-[#6e59f6]" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="pointer-events-none absolute left-0 top-3/4 -translate-y-1/2 text-[#664545]" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
             </svg>
-            <input type="text" id="search-input" placeholder="Search..." class="w-full bg-transparent border-b border-[#AAA] text-[#193349] placeholder-gray-500 focus:outline-none focus:border-[#6e59f6] pb-1 pt-1 pl-6" />
+            <input type="text" id="search-input" placeholder="Search..." class="w-full bg-transparent border-b border-[#AAA] text-[#2A2020] placeholder-gray-500 focus:outline-none focus:border-[#664545] pb-1 pt-1 pl-6" />
           </div>
           
       </div>
       
       <!-- Research Theme Filter (3 columns) -->
       <div class="lg:col-span-3">
-        <h3 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide mb-3">BY RESEARCH THEME</h3>
+        <h3 class="text-[#664545] text-xl font-bold mb-3">By Research Theme</h3>
         <div>
           {% for theme_hash in site.data.research_theme %}
             {% assign theme = theme_hash[1] %}
@@ -112,14 +121,14 @@ title: Lab for Urban Justice and Technology
                 {% assign theme_count = theme_count | plus: 1 %}
               {% endif %}
             {% endfor %}
-            <button class="research-theme-btn inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#fafcf3] text-[#193349] text-xs font-medium mr-2 mb-1" data-theme="{{ theme_key }}"><span class="theme-title">{{ theme.title }}</span><span class="ml-1 text-[10px] opacity-70">({{ theme_count }})</span></button>
+            <button class="research-theme-btn text-left inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#FBFCF4] text-[#2A2020] text-sm font-medium mr-2 mb-1" data-theme="{{ theme_key }}"><span class="theme-title">{{ theme.title }}</span><span class="ml-1 text-[12px] opacity-70">({{ theme_count }})</span></button>
           {% endfor %}
         </div>
       </div>
       
       <!-- Tags Filter (3 columns) -->
-      <div class="lg:col-span-3">
-        <h3 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide mb-3">BY TAGS</h3>
+      <div class="lg:col-span-6">
+        <h3 class="text-[#664545] text-xl font-bold mb-3">By Tags</h3>
         <div>
           {% for tag_group in site.data.tags %}
             {% for tag in tag_group %}
@@ -130,7 +139,7 @@ title: Lab for Urban Justice and Technology
                     {% assign tag_count = tag_count | plus: 1 %}
                   {% endif %}
                 {% endfor %}
-                <button class="tag-btn inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#fafcf3] text-[#193349] text-xs font-medium mr-2 mb-1" data-tag="{{ tag }}">{{ tag }}<span class="ml-1 text-[10px] opacity-70">({{ tag_count }})</span></button>
+                <button class="tag-btn inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#FBFCF4] text-[#2A2020] text-sm font-medium mr-2 mb-1" data-tag="{{ tag }}">{{ tag }}<span class="ml-1 text-[12px] opacity-70">({{ tag_count }})</span></button>
               {% endif %}
             {% endfor %}
           {% endfor %}
@@ -139,7 +148,7 @@ title: Lab for Urban Justice and Technology
     </div>
     
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-5 py-5">
       {% assign sorted_works = site.works | sort: "year" | reverse %}
       {% for work in sorted_works %}
         {% assign url = work.external_url | default: work.url | relative_url | replace: 'index.html', '' %}
@@ -159,13 +168,13 @@ title: Lab for Urban Justice and Technology
               {% for theme_key in work.research_themes %}
                 {% assign theme = site.data.research_theme[theme_key] %}
                 {% if theme %}
-                  <span class="research-theme-btn inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#fafcf3] text-[#193349] text-xs font-medium mr-2 mb-1">{{ theme.title }}</span>
+                  <span class="research-theme-btn inline-block px-2 py-1 rounded-lg border border-[#BBBBBB] bg-[#FBFCF4] text-[#2A2020] text-sm font-medium mr-2 mb-1">{{ theme.title }}</span>
                 {% endif %}
               {% endfor %}
             </div>
           {% endif %}
           
-          <h3 class="text-[#193349] text-base md:text-lg font-bold mb-2 capitalize" style="line-height: 1.25;">
+          <h3 class="text-[#2A2020] text-base md:text-xl font-bold mb-2 capitalize" style="line-height: 1.25;">
             <a href="{{ url }}" class="hover:text-gray-500">{{ work.title }}</a>
           </h3>
           
@@ -182,11 +191,11 @@ title: Lab for Urban Justice and Technology
           {% if work.bibtex and work.bibtex.type == 'article' %}
             <div class="mb-2">
               {% if work.publisher %}
-                <p class="text-gray-600 text-sm">{{ work.publisher }}</p>
+                <p class="text-[#2A2020] text-sm">{{ work.publisher }}</p>
               {% endif %}
               {% if work.doi %}
-                <p class="text-gray-600 text-xs">
-                  <a href="https://doi.org/{{ work.doi }}" class="hover:text-[#193349] transition-colors" target="_blank">
+                <p class="text-[#2A2020] text-sm">
+                  <a href="https://doi.org/{{ work.doi }}" class="hover:text-[#2A2020] transition-colors" target="_blank">
                     DOI: {{ work.doi }}
                   </a>
                 </p>
@@ -212,22 +221,13 @@ title: Lab for Urban Justice and Technology
     </div>
   </section>
 
-  <section id="our-approach" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
-    <h1 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide">OUR APPROACH</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
-      <div class="lg:col-span-8">
-        <p class="text-[#193349] text-3xl font-semibold leading-tight">
-          Our approach is uncover how these systems formalize present-day outputs in ways that disconnect them from past wrongs — and to repair this rupture by exposing inequities, demanding accountability, and working toward redress.
-        </p>
-      </div>
-    </div>
-  </section>
+
   
   <!-- Team Section -->
   <section id="team" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <div class="lg:col-span-12">
-        <h1 class="text-[#6e59f6] text-lg font-bold uppercase tracking-wide">TEAM</h1>
+        <h1 class="text-[#664545] text-xl font-bold">Team</h1>
       </div>
     </div>
     {% for person_hash in site.data.people %}
@@ -247,20 +247,20 @@ title: Lab for Urban Justice and Technology
           <!-- Name and Affiliation (4 columns on desktop, full width on mobile) -->
           <div class="lg:col-span-4">
             {% if person.url %}
-              <h3 class="text-[#193349] text-lg md:text-xl font-bold mb-2">
+              <h3 class="text-[#2A2020] text-xl md:text-xl font-bold mb-2">
                 <a href="{{person.url}}" class="hover:text-gray-500">{{person.first_name}} {{person.last_name}}</a>
               </h3>
             {% else %}
-              <h3 class="text-[#193349] text-lg md:text-xl font-bold mb-2">{{person.first_name}} {{person.last_name}}</h3>
+              <h3 class="text-[#2A2020] text-xl md:text-xl font-bold mb-2">{{person.first_name}} {{person.last_name}}</h3>
             {% endif %}
-            <p class="text-gray-600 text-sm md:text-base">{{person.title}}</p>
-            <p class="text-gray-500 text-xs md:text-sm">{{person.affiliation}}</p>
+            <p class="text-[#2A2020] text-sm md:text-base">{{person.title}}</p>
+            <p class="text-gray-500 text-sm md:text-sm">{{person.affiliation}}</p>
           </div>
           
           <!-- Description (5 columns on desktop, full width on mobile) -->
           <div class="lg:col-span-5">
             {% if person.description %}
-              <div class="text-gray-600 text-sm md:text-base leading-relaxed" id="person-desc">
+              <div class="text-[#2A2020] text-lg md:text-base leading-relaxed" id="person-desc">
                 {{ person.description | markdownify }}
               </div>
             {% endif %}
@@ -273,18 +273,18 @@ title: Lab for Urban Justice and Technology
   <!-- SVG duotone filter + CSS for work thumbnails -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" focusable="false">
     <defs>
-      <!-- Duotone mapping: shadows -> #7655ea (purple), highlights -> #fafcf3 (off-white) -->
+      <!-- Duotone mapping: shadows -> #614646 (primary), highlights -> #FBFCF4 (off-white) -->
       <filter id="duotone-7655ea-fafcf3" color-interpolation-filters="sRGB">
         <!-- Convert to grayscale (luminance) -->
         <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0" result="gray" />
-        <!-- Map grayscale to duotone colors by channel tables (black->#7655ea, white->#fafcf3) -->
+        <!-- Map grayscale to duotone colors by channel tables (black->#614646, white->#FBFCF4) -->
         <feComponentTransfer color-interpolation-filters="sRGB">
-          <!-- R channel: 0 -> 118/255 (0.462745), 1 -> 250/255 (0.980392) -->
-          <feFuncR type="table" tableValues="0.462745 0.980392" />
-          <!-- G channel: 0 -> 85/255 (0.333333), 1 -> 252/255 (0.988235) -->
-          <feFuncG type="table" tableValues="0.333333 0.988235" />
-          <!-- B channel: 0 -> 234/255 (0.917647), 1 -> 243/255 (0.952941) -->
-          <feFuncB type="table" tableValues="0.917647 0.952941" />
+          <!-- R channel: 0 -> 97/255 (0.380392), 1 -> 250/255 (0.980392) -->
+          <feFuncR type="table" tableValues="0.380392 0.980392" />
+          <!-- G channel: 0 -> 70/255 (0.274510), 1 -> 252/255 (0.988235) -->
+          <feFuncG type="table" tableValues="0.274510 0.988235" />
+          <!-- B channel: 0 -> 70/255 (0.274510), 1 -> 243/255 (0.952941) -->
+          <feFuncB type="table" tableValues="0.274510 0.952941" />
         </feComponentTransfer>
       </filter>
     </defs>
@@ -372,12 +372,12 @@ title: Lab for Urban Justice and Technology
           header.classList.add('fixed');
           header.classList.remove('sticky');
           header.classList.remove('bg-transparent');
-          header.classList.add('bg-[#fafcf3]');
+          header.classList.add('bg-[#FBFCF4]');
           if (siteHeaderInner) { containerClasses.forEach(function(cls){ siteHeaderInner.classList.add(cls); }); }
         } else {
           header.classList.remove('fixed');
           header.classList.add('sticky');
-          header.classList.remove('bg-[#fafcf3]');
+          header.classList.remove('bg-[#FBFCF4]');
           header.classList.add('bg-transparent');
           if (siteHeaderInner) { containerClasses.forEach(function(cls){ siteHeaderInner.classList.remove(cls); }); }
         }
@@ -407,10 +407,10 @@ title: Lab for Urban Justice and Technology
   <section class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
       <div class="lg:col-span-3 mb-4 lg:mb-0">
-        <h2 class="text-[#6e59f6] text-xl md:text-2xl font-bold">Interested in joining?</h2>
+        <h2 class="text-[#664545] text-xl md:text-2xl font-bold">Interested in joining?</h2>
       </div>
       <div class="lg:col-span-6">
-        <p class="text-gray-600">We're always looking for passionate researchers and collaborators who share our vision for urban justice and technology. <a href="mailto:wyso@umich.edu" class="underline">Get in touch</a> to learn more about opportunities.</p>
+        <p class="text-[#2A2020] text-lg">We're always looking for passionate researchers and collaborators who share our vision for urban justice and technology. <a href="mailto:wyso@umich.edu" class="underline">Get in touch</a> to learn more about opportunities.</p>
       </div>
     </div>
   </section>
