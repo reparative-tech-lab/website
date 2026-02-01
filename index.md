@@ -99,7 +99,7 @@ title: Reparative Technology Lab
       
       
           <div class="relative">
-            <svg class="pointer-events-none absolute left-0 top-3/4 -translate-y-1/2 text-[#664545]" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 text-[#664545]" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
             </svg>
