@@ -13,11 +13,11 @@ title: Reparative Technology Lab
 
     <!-- Header over video -->
     <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#2A2020] py-6">
-       <div id="site-header-inner" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
+       <div id="site-header-inner" class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
 
-        <div id="site-header-inner-fixed" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
+        <div id="site-header-inner-fixed" class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem]">   
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 pb-3 md:pb-0 lg:pb-0">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 md:pb-0 lg:pb-0">
               <div class="lg:col-span-6 flex items-center justify-between">
                 <a href="{{ '/' | relative_url }}">
                   <h1 class="text-[#2A2020] text-xl md:text-2xl font-bold">
@@ -48,10 +48,10 @@ title: Reparative Technology Lab
      </header>
     
     <!-- Hero Section -->
-     <div id="hero" class="relative z-10 w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-5 md:py-10">
+     <div id="hero" class="relative z-10 w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-5 md:py-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div class="lg:col-span-7">
-          <p class="text-[#2A2020] text-4xl leading-tight">
+          <p class="text-[#2A2020] text-2xl md:text-4xl leading-tight">
             <span class="text-[#664545] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairng the relationships by acknowledging and addressing past harms.
           </p>
         </div>
@@ -59,7 +59,7 @@ title: Reparative Technology Lab
     </div>
 
     <!-- Research Theme Section -->
-     <section class="relative z-10 w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
+     <section class="relative z-10 w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
         <div class="lg:col-span-12">
           <h1 class="text-[#664545] text-xl font-bold">Research Themes</h1>
@@ -78,7 +78,7 @@ title: Reparative Technology Lab
       </div>
     </section>
   </div>
-  <section id="our-approach" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
+  <section id="our-approach" class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
     <h1 class="text-[#664545] text-xl font-bold">Our Approach</h1>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <div class="lg:col-span-8">
@@ -90,7 +90,7 @@ title: Reparative Technology Lab
   </section>
 
   <!-- Our Work Section -->
-  <section id="our-work" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
+  <section id="our-work" class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:py-8">
     <!-- Title and Filter Row -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <!-- OUR WORK Title (3 columns) -->
@@ -224,7 +224,7 @@ title: Reparative Technology Lab
 
   
   <!-- Team Section -->
-  <section id="team" class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
+  <section id="team" class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <div class="lg:col-span-12">
         <h1 class="text-[#664545] text-xl font-bold">Team</h1>
@@ -367,7 +367,7 @@ title: Reparative Technology Lab
         }
 
         // when below hero-wrap bottom, switch to fixed (sticky within hero might release at its boundary)
-        var containerClasses = ['w-full','px-5','sm:px-6','md:px-8','lg:px-10','xl:px-12','2xl:px-16','3xl:px-24','4xl:px-32','mx-auto','max-w-[92rem]','2xl:max-w-[110rem]','3xl:max-w-[128rem]','4xl:max-w-[144rem]'];
+        var containerClasses = ['w-full','px-3','sm:px-6','md:px-8','lg:px-10','xl:px-12','2xl:px-16','3xl:px-24','4xl:px-32','mx-auto','max-w-[92rem]','2xl:max-w-[110rem]','3xl:max-w-[128rem]','4xl:max-w-[144rem]'];
         if (scrollY + 1 >= heroWrapBottom) {
           header.classList.add('fixed');
           header.classList.remove('sticky');
@@ -404,7 +404,7 @@ title: Reparative Technology Lab
   </script>
 
   <!-- Interested in Joining Section -->
-  <section class="w-full px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
+  <section class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-8 md:py-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
       <div class="lg:col-span-3 mb-4 lg:mb-0">
         <h2 class="text-[#664545] text-xl md:text-2xl font-bold">Interested in joining?</h2>
