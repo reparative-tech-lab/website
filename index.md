@@ -83,7 +83,7 @@ title: Reparative Technology Lab
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
       <div class="lg:col-span-8">
         <p class="text-[#2A2020] text-3xl leading-tight">
-          Our approach is uncover how these systems formalize present-day outputs in ways that disconnect them from past wrongs — and to work toward redress.
+          Our approach is to uncover how these systems formalize present-day outputs in ways that disconnect them from past wrongs — and to work toward redress.
         </p>
       </div>
     </div>
