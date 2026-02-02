@@ -66,7 +66,11 @@ body {
 #site-header.is-shrunk {
   padding-top: 0.5rem; /* ~py-2 equivalent */
   padding-bottom: 0.5rem;
-  background-color: #FBFCF4; /* apply background after scroll */
+  background-color: #05030b; /* apply background after scroll */
+}
+
+#site-header.is-shrunk #primary-nav {
+  @apply items-center;
 }
 
 #site-header.is-shrunk img {
