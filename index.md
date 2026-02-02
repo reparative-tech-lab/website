@@ -10,7 +10,7 @@ title: Reparative Technology Lab
     <div id="hero-wrap" class="relative w-full">
 
       <!-- Image Background -->
-      <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover z-0"> />
+      <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover opacity-[0.8] z-0"> />
 
       <!-- Header over Image -->
       <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#2A2020] py-6">
@@ -52,7 +52,7 @@ title: Reparative Technology Lab
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div class="lg:col-span-7">
             <p class="text-[#fbfcf5] text-3xl md:text-4xl">
-              <span class="text-[#b9a59b] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairng the relationships by acknowledging and addressing past harms.
+              <span class="text-[#b9a59b] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairing the relationships by actively acknowledging and addressing past harms.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ title: Reparative Technology Lab
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-4">
         <div class="lg:col-span-8">
           <p class="text-[#2A2020] text-3xl leading-tight">
-            Our approach is to uncover how these systems formalize present-day outputs in ways that disconnect them from past wrongs — and to work toward redress.
+            Our approach is to uncover how urban technologies formalize present-day outputs in ways that disconnect them from past wrongs — and, by doing so, to shift the work of creating urban technologies toward redress.
           </p>
         </div>
       </div>
