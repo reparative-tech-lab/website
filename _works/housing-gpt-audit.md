@@ -17,6 +17,7 @@ research_themes:
   - exposing
 tags:
   - Peer-reviewed article
+  - Conference paper
 images:
   - figure_01.png
 ---

@@ -18,6 +18,7 @@ research_themes:
   - reparative-tech
 tags:
   - Peer-reviewed article
+  - Conference paper
 images:
   - figure_01.png
 ---
