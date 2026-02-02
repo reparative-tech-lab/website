@@ -272,7 +272,7 @@ title: Reparative Technology Lab
             <!-- Description (5 columns on desktop, full width on mobile) -->
             <div class="lg:col-span-5">
               {% if person.description %}
-                <div class="text-[#2A2020] text-lg leading-relaxed" id="person-desc">
+                <div class="text-[#2A2020] text-lg leading-[1.25]" id="person-desc">
                   {{ person.description | markdownify }}
                 </div>
               {% endif %}
@@ -422,7 +422,7 @@ title: Reparative Technology Lab
           <h2 class="text-[#664545] text-xl md:text-2xl font-bold">Interested in joining?</h2>
         </div>
         <div class="lg:col-span-6">
-          <p class="text-[#2A2020] text-lg">We're always looking for passionate researchers and collaborators who share our vision for urban justice and technology. <a href="mailto:wyso@umich.edu" class="underline">Get in touch</a> to learn more about opportunities.</p>
+          <p class="text-[#2A2020] text-lg leading-[1.25]">We're always looking for passionate researchers and collaborators who share our vision for urban justice and technology. <a href="mailto:wyso@umich.edu" class="underline">Get in touch</a> to learn more about opportunities.</p>
         </div>
       </div>
     </section>
