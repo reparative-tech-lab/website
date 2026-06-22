@@ -23,7 +23,7 @@ email: wyso@umich.edu
 description: >- # this means to ignore newlines until "baseurl:"
   The Reparative Technology Lab studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairng the relationships by acknowledging and addressing past harms. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://r-t-lab.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
