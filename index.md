@@ -4,13 +4,28 @@ home: true
 title: Reparative Technology Lab
 ---
 
-<div class="bg-[#05030b]">
+<div class="bg-[#FBFCF4]">
 
-  <div class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] bg-[#05030b]">
+  <div class="w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] bg-[#FBFCF4]">
     <div id="hero-wrap" class="relative w-full">
 
       <!-- Image Background -->
       <!-- <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover opacity-[0.8] z-0"> /> -->
+
+      <style>
+        @font-face {
+          font-family: 'Tilt Prism';
+          src: url('{{ "/assets/css/TiltPrism-Regular-VariableFont.ttf" | relative_url }}') format('truetype');
+        }
+        #rt-logo-text {
+          font-family: 'Tilt Prism', sans-serif;
+          font-size: 340px;
+          color: #664545;
+          font-variation-settings: 'XROT' 0, 'YROT' 0;
+          line-height: 1;
+          display: block;
+        }
+      </style>
 
       <!-- Header over Image -->
       <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#2A2020] py-6">
@@ -20,13 +35,11 @@ title: Reparative Technology Lab
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 md:pb-0 lg:pb-0">
                   <div class="lg:col-span-6 flex items-center justify-between">
-                    <a href="{{ '/' | relative_url }}">
-                      <h1 class="text-[#2A2020] text-xl md:text-2xl font-bold">
-                        <img src="{{ '/assets/imgs/logo.svg' | relative_url }}" alt="Reparative Technology Lab" onerror="(function(img){ if(img.dataset.fallbackTried) return; img.dataset.fallbackTried=true; img.src='/assets/imgs/logo.svg'; })(this)">
-                      </h1>
+                    <a href="{{ '/' | relative_url }}" aria-label="Reparative Technology Lab">
+                      <span id="rt-logo-text">RT</span>
                     </a>
                     <button id="menu-toggle" class="lg:hidden ml-4 p-2 rounded" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#fbfcf5]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#2A2020]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                       </svg>
                     </button>
@@ -34,13 +47,13 @@ title: Reparative Technology Lab
                   <ul id="primary-nav" class="lg:col-span-6 hidden lg:flex flex-col lg:flex-row lg:justify-end  space-y-1 lg:space-y-0 lg:space-x-8 lg:mt-0">
 
                     <li>
-                      <a href="{{ '/#our-approach' | relative_url }}" class="text-[#fbfcf5] text-lg font-bold hover:text-gray-500">Our Approach</a>
+                      <a href="{{ '/#our-approach' | relative_url }}" class="text-[#2A2020] text-lg font-bold hover:text-gray-500">Our Approach</a>
                     </li>
                     <li>
-                      <a href="{{ '/#our-work' | relative_url }}" class="text-[#fbfcf5] text-lg font-bold  hover:text-gray-500">Our Work</a>
+                      <a href="{{ '/#our-work' | relative_url }}" class="text-[#2A2020] text-lg font-bold  hover:text-gray-500">Our Work</a>
                     </li>
                     <li>
-                      <a href="{{ '/#team' | relative_url }}" class="text-[#fbfcf5] text-lg font-bold hover:text-gray-500">Team</a>
+                      <a href="{{ '/#team' | relative_url }}" class="text-[#2A2020] text-lg font-bold hover:text-gray-500">Team</a>
                     </li>
                   </ul>
                 </div>
@@ -51,8 +64,8 @@ title: Reparative Technology Lab
       <div id="hero" class="relative z-10 w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-5 md:py-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
           <div class="lg:col-span-7">
-            <p class="text-[#fbfcf5] text-3xl md:text-4xl">
-              <span class="text-[#b9a59b] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairing the relationships by actively acknowledging and addressing past harms.
+            <p class="text-[#2A2020] text-3xl md:text-4xl">
+              <span class="text-[#664545] italic">The Reparative Technology Lab</span> studies urban technologies, collects data, and builds tools and visualizations to expose the inequities behind urban technologies and contribute to repairing the relationships by actively acknowledging and addressing past harms.
             </p>
           </div>
         </div>
@@ -62,7 +75,7 @@ title: Reparative Technology Lab
       <section class="relative z-10 w-full px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 3xl:px-24 4xl:px-32 mx-auto max-w-[92rem] 2xl:max-w-[110rem] 3xl:max-w-[128rem] 4xl:max-w-[144rem] py-6 md:pt-8 md:pb-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mb-2">
           <div class="lg:col-span-12">
-            <h1 class="text-[#b9a59b] text-xl font-bold">Research Themes</h1>
+            <h1 class="text-[#664545] text-xl font-bold">Research Themes</h1>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
@@ -71,8 +84,8 @@ title: Reparative Technology Lab
 
             {% assign theme = theme_hash[1] %}
             <div class="lg:col-span-4 mb-4 lg:mb-0">
-              <h2 class="text-[#fbfcf5] text-xl md:text-xl font-bold mb-2">{{ theme.title }}</h2>
-              <p class="text-[#fbfcf5] text-xl">{{ theme.description }}</p>
+              <h2 class="text-[#2A2020] text-xl md:text-xl font-bold mb-2">{{ theme.title }}</h2>
+              <p class="text-[#2A2020] text-xl">{{ theme.description }}</p>
             </div>
           {% endfor %}
         </div>
@@ -363,9 +376,12 @@ title: Reparative Technology Lab
       (function() {
         var header = document.getElementById('site-header');
         var siteHeaderInner = document.getElementById("site-header-inner-fixed");
+        var logoText = document.getElementById('rt-logo-text');
         if (!header) return;
-        var isShrunk = false;
         var threshold = 20;
+        var startFontSize = 340;
+        var endFontSize = 40;
+        var scrollRange = 300;
         function onScroll() {
           var heroWrap = document.getElementById('hero-wrap');
           var heroWrapBottom = heroWrap ? (heroWrap.offsetTop + heroWrap.offsetHeight) : 0;
@@ -378,18 +394,25 @@ title: Reparative Technology Lab
             header.classList.remove('is-shrunk');
           }
 
+          // shrink logo font size as user scrolls
+          if (logoText) {
+            var progress = Math.min(scrollY / scrollRange, 1);
+            var fontSize = startFontSize + (endFontSize - startFontSize) * progress;
+            logoText.style.fontSize = fontSize + 'px';
+          }
+
           // when below hero-wrap bottom, switch to fixed (sticky within hero might release at its boundary)
           var containerClasses = ['w-full','px-3','sm:px-6','md:px-8','lg:px-10','xl:px-12','2xl:px-16','3xl:px-24','4xl:px-32','mx-auto','max-w-[92rem]','2xl:max-w-[110rem]','3xl:max-w-[128rem]','4xl:max-w-[144rem]'];
           if (scrollY + 1 >= heroWrapBottom) {
             header.classList.add('fixed');
             header.classList.remove('sticky');
             header.classList.remove('bg-transparent');
-            header.classList.add('bg-[#05030b]');
+            header.classList.add('bg-[#FBFCF4]');
             if (siteHeaderInner) { containerClasses.forEach(function(cls){ siteHeaderInner.classList.add(cls); }); }
           } else {
             header.classList.remove('fixed');
             header.classList.add('sticky');
-            header.classList.remove('bg-[#05030b]');
+            header.classList.remove('bg-[#FBFCF4]');
             header.classList.add('bg-transparent');
             if (siteHeaderInner) { containerClasses.forEach(function(cls){ siteHeaderInner.classList.remove(cls); }); }
           }
@@ -409,6 +432,38 @@ title: Reparative Technology Lab
               primaryNav.classList.add('hidden');
               menuToggle.setAttribute('aria-expanded', 'false');
             }
+          });
+        }
+
+        if (logoText) {
+          var isHovering = false;
+          var mouseTargetXrot = 0, mouseTargetYrot = 0;
+          var currentXrot = 0, currentYrot = 0;
+
+          function onLogoMouseMove(e) {
+            var rect = logoText.getBoundingClientRect();
+            mouseTargetYrot = ((e.clientX - rect.left) / rect.width * 2 - 1) * 45;
+            mouseTargetXrot = ((e.clientY - rect.top) / rect.height * 2 - 1) * 45;
+          }
+          logoText.addEventListener('mouseenter', function() {
+            isHovering = true;
+            logoText.addEventListener('mousemove', onLogoMouseMove);
+          });
+          logoText.addEventListener('mouseleave', function() {
+            isHovering = false;
+            logoText.removeEventListener('mousemove', onLogoMouseMove);
+          });
+
+          requestAnimationFrame(function loop(timestamp) {
+            var animXrot = Math.sin(timestamp / 1000) * 45;
+            var animYrot = Math.cos(timestamp / 1300) * 45;
+            var targetXrot = isHovering ? mouseTargetXrot : animXrot;
+            var targetYrot = isHovering ? mouseTargetYrot : animYrot;
+            var speed = isHovering ? 0.12 : 0.04;
+            currentXrot += (targetXrot - currentXrot) * speed;
+            currentYrot += (targetYrot - currentYrot) * speed;
+            logoText.style.fontVariationSettings = "'XROT' " + currentXrot.toFixed(2) + ", 'YROT' " + currentYrot.toFixed(2);
+            requestAnimationFrame(loop);
           });
         }
 
