@@ -10,7 +10,7 @@ title: Reparative Technology Lab
     <div id="hero-wrap" class="relative w-full">
 
       <!-- Image Background -->
-      <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover opacity-[0.8] z-0"> />
+      <!-- <img src="{{ '/assets/imgs/bg.jpg' | relative_url }}" class="absolute inset-0 w-full h-full object-cover opacity-[0.8] z-0"> /> -->
 
       <!-- Header over Image -->
       <header id="site-header" class="sticky top-0 left-0 w-full z-20 bg-transparent text-[#2A2020] py-6">
