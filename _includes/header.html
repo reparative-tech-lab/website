@@ -79,6 +79,22 @@
       isHovering = false;
       logoText.removeEventListener('mousemove', onLogoMouseMove);
     });
+    logoText.addEventListener('touchstart', function(e) {
+      isHovering = true;
+      var touch = e.touches[0];
+      var rect = logoText.getBoundingClientRect();
+      mouseTargetYrot = ((touch.clientX - rect.left) / rect.width * 2 - 1) * 45;
+      mouseTargetXrot = ((touch.clientY - rect.top) / rect.height * 2 - 1) * 45;
+    }, { passive: true });
+    logoText.addEventListener('touchmove', function(e) {
+      var touch = e.touches[0];
+      var rect = logoText.getBoundingClientRect();
+      mouseTargetYrot = ((touch.clientX - rect.left) / rect.width * 2 - 1) * 45;
+      mouseTargetXrot = ((touch.clientY - rect.top) / rect.height * 2 - 1) * 45;
+    }, { passive: true });
+    logoText.addEventListener('touchend', function() {
+      isHovering = false;
+    });
 
     requestAnimationFrame(function loop(timestamp) {
       var animXrot = Math.sin(timestamp / 1000) * 45;

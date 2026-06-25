@@ -25,6 +25,9 @@ title: Reparative Technology Lab
           line-height: 1;
           display: block;
         }
+        @media (max-width: 768px) {
+          #rt-logo-text { font-size: 120px; }
+        }
       </style>
 
       <!-- Header over Image -->
@@ -379,9 +382,11 @@ title: Reparative Technology Lab
         var logoText = document.getElementById('rt-logo-text');
         if (!header) return;
         var threshold = 20;
-        var startFontSize = 340;
+        function getStartFontSize() { return window.innerWidth < 768 ? 120 : 340; }
+        var startFontSize = getStartFontSize();
         var endFontSize = 40;
         var scrollRange = 300;
+        window.addEventListener('resize', function() { startFontSize = getStartFontSize(); });
         function onScroll() {
           var heroWrap = document.getElementById('hero-wrap');
           var heroWrapBottom = heroWrap ? (heroWrap.offsetTop + heroWrap.offsetHeight) : 0;
@@ -452,6 +457,22 @@ title: Reparative Technology Lab
           logoText.addEventListener('mouseleave', function() {
             isHovering = false;
             logoText.removeEventListener('mousemove', onLogoMouseMove);
+          });
+          logoText.addEventListener('touchstart', function(e) {
+            isHovering = true;
+            var touch = e.touches[0];
+            var rect = logoText.getBoundingClientRect();
+            mouseTargetYrot = ((touch.clientX - rect.left) / rect.width * 2 - 1) * 45;
+            mouseTargetXrot = ((touch.clientY - rect.top) / rect.height * 2 - 1) * 45;
+          }, { passive: true });
+          logoText.addEventListener('touchmove', function(e) {
+            var touch = e.touches[0];
+            var rect = logoText.getBoundingClientRect();
+            mouseTargetYrot = ((touch.clientX - rect.left) / rect.width * 2 - 1) * 45;
+            mouseTargetXrot = ((touch.clientY - rect.top) / rect.height * 2 - 1) * 45;
+          }, { passive: true });
+          logoText.addEventListener('touchend', function() {
+            isHovering = false;
           });
 
           requestAnimationFrame(function loop(timestamp) {
