@@ -94,6 +94,253 @@ title: Reparative Technology Lab
         </div>
       </section>
 
+      <script>
+      /* ============================================================
+         Hero interactive background — "Stitching the City"
+         Urban data nodes connected by repair threads.
+         Mouse hover: kintsugi-gold shimmer heals nearby connections.
+         Click / tap: repair wave ripples outward from touch point.
+         ============================================================ */
+      (function() {
+        var heroWrap = document.getElementById('hero-wrap');
+        if (!heroWrap) return;
+
+        var canvas = document.createElement('canvas');
+        canvas.setAttribute('aria-hidden', 'true');
+        canvas.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;display:block;';
+        heroWrap.insertBefore(canvas, heroWrap.firstChild);
+
+        var ctx = canvas.getContext('2d');
+        var W = 0, H = 0;
+        var nodes = [], edges = [];
+        var mouse = { x: -9999, y: -9999 };
+        var waves = [];
+        var running = true;
+        var resizeTimer;
+
+        var CELL, MAX_DIST, MOUSE_RADIUS;
+
+        function cfg() {
+          var mobile = window.innerWidth < 768;
+          CELL = mobile ? 110 : 80;
+          MAX_DIST = CELL * 1.65;
+          MOUSE_RADIUS = mobile ? 120 : 195;
+        }
+
+        function buildGrid() {
+          cfg();
+          nodes = [];
+          edges = [];
+          var cols = Math.ceil(W / CELL) + 2;
+          var rows = Math.ceil(H / CELL) + 2;
+
+          for (var r = -1; r < rows; r++) {
+            for (var c = -1; c < cols; c++) {
+              nodes.push({
+                x: (c + 0.5) * CELL + (Math.random() * 2 - 1) * CELL * 0.44,
+                y: (r + 0.5) * CELL + (Math.random() * 2 - 1) * CELL * 0.44,
+                phase: Math.random() * Math.PI * 2
+              });
+            }
+          }
+
+          for (var i = 0; i < nodes.length; i++) {
+            for (var j = i + 1; j < nodes.length; j++) {
+              var dx = nodes[i].x - nodes[j].x;
+              var dy = nodes[i].y - nodes[j].y;
+              var d = Math.sqrt(dx * dx + dy * dy);
+              if (d < MAX_DIST) {
+                edges.push({
+                  a: i, b: j, d: d,
+                  repair: 0.12 + Math.random() * 0.58,
+                  rest:   0.22 + Math.random() * 0.46,
+                  phase:  Math.random() * Math.PI * 2,
+                  lit: 0
+                });
+              }
+            }
+          }
+        }
+
+        function resize() {
+          W = canvas.width  = heroWrap.offsetWidth;
+          H = canvas.height = heroWrap.offsetHeight;
+          buildGrid();
+        }
+
+        if (window.IntersectionObserver) {
+          new IntersectionObserver(function(entries) {
+            running = entries[0].isIntersecting;
+          }, { threshold: 0 }).observe(heroWrap);
+        }
+
+        function draw(ts) {
+          ctx.clearRect(0, 0, W, H);
+
+          /* ---- process repair waves (from clicks/taps) ---- */
+          for (var wi = waves.length - 1; wi >= 0; wi--) {
+            var wv = waves[wi];
+            wv.r  += 5.5;
+            wv.a  *= 0.963;
+            if (wv.a < 0.007) { waves.splice(wi, 1); continue; }
+
+            for (var i = 0; i < edges.length; i++) {
+              var e = edges[i];
+              var na = nodes[e.a], nb = nodes[e.b];
+              var ecx = (na.x + nb.x) * 0.5, ecy = (na.y + nb.y) * 0.5;
+              var dd = Math.sqrt((ecx - wv.x) * (ecx - wv.x) + (ecy - wv.y) * (ecy - wv.y));
+              var ring = Math.abs(dd - wv.r);
+              if (ring < 38) {
+                var fi = (1 - ring / 38) * wv.a;
+                e.repair = Math.min(1, e.repair + fi * 0.20);
+                e.lit    = Math.min(1, e.lit    + fi * 0.55);
+              }
+            }
+          }
+
+          /* ---- draw edges (repair threads) ---- */
+          for (var i = 0; i < edges.length; i++) {
+            var e = edges[i];
+            var na = nodes[e.a], nb = nodes[e.b];
+
+            var inA = na.x > -4 && na.x < W + 4 && na.y > -4 && na.y < H + 4;
+            var inB = nb.x > -4 && nb.x < W + 4 && nb.y > -4 && nb.y < H + 4;
+            if (!inA && !inB) continue;
+
+            var ecx = (na.x + nb.x) * 0.5, ecy = (na.y + nb.y) * 0.5;
+            var mdx = ecx - mouse.x, mdy = ecy - mouse.y;
+            var md  = Math.sqrt(mdx * mdx + mdy * mdy);
+            var mi  = Math.max(0, 1 - md / MOUSE_RADIUS);
+            mi = mi * mi;
+
+            if (mi > 0) {
+              e.lit    = Math.min(1, e.lit + mi * 0.075);
+              e.repair = Math.min(1, e.repair + mi * 0.010);
+            } else {
+              e.lit    = Math.max(0, e.lit - 0.024);
+              e.repair += (e.rest - e.repair) * 0.00042;
+            }
+
+            var shimmer = Math.sin(ts / 580 + e.phase) * 0.018;
+            var alpha   = 0.038 + e.repair * 0.072 + e.lit * 0.105 + shimmer;
+            alpha = Math.max(0, Math.min(0.23, alpha));
+
+            /* thread grows outward from center as repair increases */
+            var t  = 0.32 + e.repair * 0.68;
+            var hx = (nb.x - na.x) * (1 - t) * 0.5;
+            var hy = (nb.y - na.y) * (1 - t) * 0.5;
+            var x1 = na.x + hx, y1 = na.y + hy;
+            var x2 = nb.x - hx, y2 = nb.y - hy;
+
+            /* primary thread */
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = 'rgba(102,69,69,' + alpha.toFixed(3) + ')';
+            ctx.lineWidth   = 0.5 + e.lit * 0.95;
+            ctx.stroke();
+
+            /* kintsugi gold shimmer for lit threads */
+            if (e.lit > 0.07) {
+              ctx.beginPath();
+              ctx.moveTo(x1, y1);
+              ctx.lineTo(x2, y2);
+              ctx.strokeStyle = 'rgba(193,149,88,' + ((e.lit - 0.07) * 0.16).toFixed(3) + ')';
+              ctx.lineWidth   = 0.55;
+              ctx.stroke();
+            }
+          }
+
+          /* ---- draw nodes ---- */
+          for (var i = 0; i < nodes.length; i++) {
+            var n = nodes[i];
+            if (n.x < -4 || n.x > W + 4 || n.y < -4 || n.y > H + 4) continue;
+
+            var mdx = n.x - mouse.x, mdy = n.y - mouse.y;
+            var md  = Math.sqrt(mdx * mdx + mdy * mdy);
+            var mi  = Math.max(0, 1 - md / MOUSE_RADIUS);
+            mi = mi * mi;
+
+            var pulse = Math.sin(ts / 1500 + n.phase) * 0.026;
+            var alpha = 0.068 + mi * 0.235 + pulse;
+            var r     = 1.2 + mi * 2.4;
+
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(102,69,69,' + Math.min(0.38, Math.max(0, alpha)).toFixed(3) + ')';
+            ctx.fill();
+
+            if (mi > 0.18) {
+              ctx.beginPath();
+              ctx.arc(n.x, n.y, r * 3.0, 0, Math.PI * 2);
+              ctx.strokeStyle = 'rgba(193,149,88,' + ((mi - 0.18) * 0.13).toFixed(3) + ')';
+              ctx.lineWidth   = 0.65;
+              ctx.stroke();
+            }
+          }
+
+          /* ---- draw expanding wave rings ---- */
+          for (var wi = 0; wi < waves.length; wi++) {
+            var wv = waves[wi];
+            ctx.beginPath();
+            ctx.arc(wv.x, wv.y, wv.r, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(193,149,88,' + (wv.a * 0.17).toFixed(3) + ')';
+            ctx.lineWidth   = 1.1;
+            ctx.stroke();
+          }
+        }
+
+        function loop(ts) {
+          if (running) draw(ts);
+          requestAnimationFrame(loop);
+        }
+
+        /* ---- input: mouse ---- */
+        heroWrap.addEventListener('mousemove', function(e) {
+          var rect = heroWrap.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
+        }, { passive: true });
+
+        heroWrap.addEventListener('mouseleave', function() {
+          mouse.x = -9999; mouse.y = -9999;
+        }, { passive: true });
+
+        heroWrap.addEventListener('click', function(e) {
+          var rect = heroWrap.getBoundingClientRect();
+          waves.push({ x: e.clientX - rect.left, y: e.clientY - rect.top, r: 0, a: 1 });
+        }, { passive: true });
+
+        /* ---- input: touch ---- */
+        heroWrap.addEventListener('touchstart', function(e) {
+          var rect = heroWrap.getBoundingClientRect();
+          var t = e.touches[0];
+          mouse.x = t.clientX - rect.left;
+          mouse.y = t.clientY - rect.top;
+          waves.push({ x: mouse.x, y: mouse.y, r: 0, a: 1 });
+        }, { passive: true });
+
+        heroWrap.addEventListener('touchmove', function(e) {
+          var rect = heroWrap.getBoundingClientRect();
+          var t = e.touches[0];
+          mouse.x = t.clientX - rect.left;
+          mouse.y = t.clientY - rect.top;
+        }, { passive: true });
+
+        heroWrap.addEventListener('touchend', function() {
+          mouse.x = -9999; mouse.y = -9999;
+        }, { passive: true });
+
+        window.addEventListener('resize', function() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(resize, 120);
+        });
+
+        resize();
+        requestAnimationFrame(loop);
+      })();
+      </script>
+
     </div>
 
   </div>
