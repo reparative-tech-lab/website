@@ -95,3 +95,21 @@ navalkha:
   first_name: Chenab
   last_name: Navalkha
   affiliation: MIT
+
+jsteil:
+  type: collaborator
+  first_name: Justin
+  last_name: Steil
+  affiliation: MIT
+
+noxbei:
+  type: collaborator
+  first_name: Nox
+  last_name: Bei
+  affiliation: MIT
+
+echarno:
+  type: collaborator
+  first_name: Emilia
+  last_name: Charno
+  affiliation: MIT
